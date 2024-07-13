@@ -24,7 +24,7 @@ const CreateProduct = () => {
   const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<FormValues> = async (data: any) => {
-    console.log(data);
+    //console.log(data);
     const imageFile = { image: data.image[0] };
     const res = await axios.post(image_hosting_api, imageFile, {
       headers: {
@@ -41,7 +41,7 @@ const CreateProduct = () => {
         image: res.data.data.display_url,
       };
       const result = await createProduct(product);
-      console.log(result);
+      //console.log(result);
       if (result.data.success) {
         Swal.fire({
           icon: "success",
