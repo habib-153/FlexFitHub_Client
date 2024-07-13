@@ -34,22 +34,23 @@ const CreateProduct = () => {
     if (res.data.success) {
       const product = {
         name: data.name,
-        price: data.price,
+        price: parseInt(data.price),
         category: data.category,
         description: data.description,
-        stock: data.stock,
+        stock: parseInt(data.stock),
         image: res.data.data.display_url,
       };
-      try {
-        await createProduct(product);
+      const result = await createProduct(product);
+      console.log(result);
+      if (result.data.success) {
         Swal.fire({
           icon: "success",
           title: "Product added successfully",
           showConfirmButton: false,
           timer: 1500,
         });
-        navigate('/products/management')
-      } catch (err) {
+        navigate("/products/management");
+      } else {
         toast.error("Failed to add product");
       }
     }
