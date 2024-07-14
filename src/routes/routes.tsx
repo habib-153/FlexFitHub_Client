@@ -8,6 +8,7 @@ import Checkout from "../pages/Checkout";
 import AboutUs from "../pages/AboutUs";
 import Home from "../pages/Home";
 import CreateProduct from "../components/ui/ProductManagement/createProduct";
+import UpdateProduct from "../components/ui/ProductManagement/updateProduct";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "addProduct",
         element: <CreateProduct />,
+      },
+      {
+        path: "update/:id",
+        element: <UpdateProduct />,
       },
     ],
   },

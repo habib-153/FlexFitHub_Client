@@ -36,7 +36,7 @@ const productApi = baseApi.injectEndpoints({
       query: ({ payload, id }) => {
         return {
           url: `/products/${id}`,
-          method: "PATCH",
+          method: "PUT",
           body: payload,
         };
       },
