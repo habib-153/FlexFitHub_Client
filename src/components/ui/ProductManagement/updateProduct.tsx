@@ -23,22 +23,26 @@ const UpdateProduct = () => {
     },
   });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (formData: any) => {
     //console.log(data);
-    const imageFile = { image: data.image[0] };
+    const imageFile = { image: formData.image[0] };
     const res = await axios.post(image_hosting_api, imageFile, {
       headers: {
         "content-type": "multipart/form-data",
       },
     });
-    if (res.data.success) {
-      const product = {
-        ...data,
+    if (res?.data?.success) {
+      const payload = {
+        name: formData.name,
+        price: parseInt(formData.price),
+        category: formData.category,
+        description: formData.description,
+        stock: parseInt(formData.stock),
         image: res.data.data.display_url,
       };
-      const result = await updateProduct({ id, product });
-      console.log(result);
-      if (result.data.success) {
+      const result = await updateProduct({ id, payload });
+      
+      if (result?.data?.success) {
         Swal.fire({
           icon: "success",
           title: "Product Updated successfully",
@@ -47,7 +51,7 @@ const UpdateProduct = () => {
         });
         navigate("/products/management");
       } else {
-        toast.error("Failed to add product");
+        toast.error("Failed to update product");
       }
     }
   };
