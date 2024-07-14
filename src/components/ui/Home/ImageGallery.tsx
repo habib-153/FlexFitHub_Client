@@ -14,12 +14,12 @@ const images = [
   {
     src: "../../../../public/galleryImg1.avif",
     width: 430,
-    height: 213,
+    height: 250,
   },
   {
     src: "../../../../public/GI4.webp",
     width: 350,
-    height: 200,
+    height: 210,
   },
   {
     src: "../../../../public/GallleryImg2.avif",

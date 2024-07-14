@@ -3,6 +3,16 @@ import { baseApi } from "./baseApi";
 
 const productApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
+    createProduct: builder.mutation({
+      query: (payload) => {
+        return {
+          url: "/products",
+          method: "POST",
+          body: payload,
+        };
+      },
+      invalidatesTags: ["Product"],
+    }),
     getAllProduct: builder.query({
       query: ({ searchTerm, categories, sort }) => {
         const params = new URLSearchParams();
@@ -38,16 +48,6 @@ const productApi = baseApi.injectEndpoints({
         return {
           url: `/products/${id}`,
           method: "PUT",
-          body: payload,
-        };
-      },
-      invalidatesTags: ["Product"],
-    }),
-    createProduct: builder.mutation({
-      query: (payload) => {
-        return {
-          url: "/products",
-          method: "POST",
           body: payload,
         };
       },
