@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import productApi from "../redux/api/productApi";
 import Loading from "../components/ui/global/Loading";
 import ErrorPage from "./ErrorPage";
@@ -8,6 +8,7 @@ import { addToCart, updateCart } from "../redux/features/cartSlice";
 import { useForm } from "react-hook-form";
 import CustomButton2 from "../components/ui/Buttons/CustomButton2";
 import { useState } from "react";
+import { toast } from "sonner";
 
 const ProductDetails = () => {
   const { register, handleSubmit } = useForm();
@@ -15,6 +16,7 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const { data, isLoading, error } = productApi.useGetSingleProductQuery(id);
+  const navigate = useNavigate()
 
   const product = data?.data;
 
@@ -43,8 +45,11 @@ const ProductDetails = () => {
           ? updateCart({ ...cartItem, quantity: cartItem.quantity + 1 })
           : addToCart({ ...product, quantity: 1 })
       );
+      toast.success("Item added to cart");
+      navigate('/products/cart')
     }
   };
+
 
   if (isLoading) return <Loading />;
   if (error) return <ErrorPage />;
