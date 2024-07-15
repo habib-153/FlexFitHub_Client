@@ -80,51 +80,49 @@ const ProductDetails = () => {
             <div className="mb-4">
               <div className="flex justify-between">
                 <span>Status:</span>
-                <span>
-                  {product?.stock > 0 ? "In stock" : "Out of Stock"}
-                </span>
+                <span>{product?.stock > 0 ? "In stock" : "Out of Stock"}</span>
               </div>
             </div>
             {product?.stock > 0 && (
-        <form onSubmit={handleSubmit(handleAddToCart)}>
-          <div className="mb-4">
-            <label htmlFor="qty" className="block mb-2">
-              Qty
-            </label>
-            <div className="flex items-center">
-              <button
-                type="button"
-                onClick={decrementQuantity}
-                className="px-3 py-1 bg-gray-300 rounded-l"
-              >
-                -
-              </button>
-              <input
-                type="text"
-                id="qty"
-                value={quantity}
-                readOnly
-                {...register('qty')}
-                className="w-12 text-center border-t border-b"
-              />
-              <button
-                type="button"
-                onClick={incrementQuantity}
-                className="px-3 py-1 bg-gray-300 rounded-r"
-              >
-                +
-              </button>
-            </div>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-black text-white py-2 rounded"
-            disabled={product?.stock === 0}
-          >
-            Add To Cart
-          </button>
-        </form>
-      )}
+              <form onSubmit={handleSubmit(handleAddToCart)}>
+                <div className="mb-4">
+                  <label htmlFor="qty" className="block mb-2">
+                    Qty
+                  </label>
+                  <div className="flex items-center">
+                    <button
+                      type="button"
+                      onClick={decrementQuantity}
+                      className="px-3 py-1 bg-gray-300 rounded-l"
+                    >
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      id="qty"
+                      value={quantity}
+                      readOnly
+                      {...register("qty")}
+                      className="w-12 text-center border-t border-b"
+                    />
+                    <button
+                      type="button"
+                      onClick={incrementQuantity}
+                      className="px-3 py-1 bg-gray-300 rounded-r"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-black text-white py-2 rounded"
+                  disabled={product?.stock === 0}
+                >
+                  Add To Cart
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>

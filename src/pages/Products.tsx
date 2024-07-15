@@ -44,7 +44,7 @@ const Products = () => {
         {products?.data?.map((product: TProduct, idx: number) => (
           <ProductCard key={idx} product={product} />
         ))}
-        </div>
+      </div>
     </div>
   );
 };
