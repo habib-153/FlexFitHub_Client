@@ -10,11 +10,11 @@ const Sort = () => {
   };
   return (
     <div>
-      <label className="font-semibold">Sort</label>
+      <label className="font-semibold text-left">Sort:</label>
       <select
         name="price" onChange={handleSort}
         defaultValue="default"
-        className="focus:outline-0"
+        className="focus:outline-0 rounded-lg border border-gray-900 px-4 py-2"
         title="Sort by price"
       >
         <option value="default" disabled>
