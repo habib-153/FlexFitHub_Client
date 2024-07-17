@@ -25,8 +25,14 @@ export const benefits = [
   },
   {
     title: "Expert Advice and Support",
-    image: "https://i.ibb.co/x6kMLrM/humphrey-muleba-LOA2m-Tj1vhc-unsplash.jpg",
+    image: "../../public/galleryImg1.avif",
     description:
       "Our knowledgeable staff is always ready to provide expert advice and support. Whether you need help choosing the right product or guidance on how to use it effectively, we're here to assist you.",
+  },
+  {
+    title: "High-Quality Materials",
+    image: "https://i.ibb.co/x6kMLrM/humphrey-muleba-LOA2m-Tj1vhc-unsplash.jpg",
+    description:
+      "All our products are made from high-quality materials, ensuring durability and longevity. You can trust that our fitness accessories will withstand even the toughest workouts.",
   },
 ];

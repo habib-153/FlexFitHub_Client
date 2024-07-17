@@ -21,7 +21,7 @@ const ProductDetails = () => {
   const product = data?.data;
 
   const cart = useAppSelector((state) => state.cart);
-  const cartItem = cart.items?.find((item) => item._id === product._id);
+  const cartItem = cart.items?.find((item) => item?._id === product?._id);
 
   // check if the product is available on stock
   const isOutOfStock = cartItem ? cartItem?.quantity >= product?.stock : false;

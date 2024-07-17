@@ -37,19 +37,19 @@ const Cart = () => {
   };
 
   return (
-    <div className="w-full p-4">
+    <div className="w-full px-2">
       <h1 className="text-3xl font-bold my-7 text-center">Shopping Cart</h1>
-      <div className="flex flex-col gap-6 justify-between md:flex-row">
-        <div className="">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between">
+        <div className="lg:col-span-2">
           {cart.items.length === 0 ? (
-            <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 md:px-20">
+            <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 text-center">
               Your cart is empty.{" "}
               <Link to="/products" className="text-blue-500">
                 Shop Now.
               </Link>
             </div>
           ) : (
-            <div className="bg-white shadow rounded">
+            <div className="bg-white lg:col-span-2 shadow rounded">
               {cart.items.map((item) => (
                 <div key={item._id} className="flex items-center px-4 justify-between border-b">
                   <div className="w-1/6">

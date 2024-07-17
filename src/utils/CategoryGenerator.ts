@@ -1,11 +1,11 @@
 export const CategoryGenerator = [
   {
-    name: "Muscle",
+    name: "Accessories",
     image: "https://i.ibb.co/Dk2gLzM/Cast-Iron-Barbell-Standard-Elite-Series.webp",
   },
   {
-    name: "Accessories",
-    image: "https://i.ibb.co/6NypnK0/Mat.webp",
+    name: "Supplements",
+    image: "../../public/supp5.jpg",
   },
   {
     name: "Strength",
