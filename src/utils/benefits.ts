@@ -25,7 +25,7 @@ export const benefits = [
   },
   {
     title: "Expert Advice and Support",
-    image: "../../public/galleryImg1.avif",
+    image: "https://i.ibb.co/XpZv29C/gallery-Img1.jpg",
     description:
       "Our knowledgeable staff is always ready to provide expert advice and support. Whether you need help choosing the right product or guidance on how to use it effectively, we're here to assist you.",
   },

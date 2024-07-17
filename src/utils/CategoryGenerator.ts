@@ -5,7 +5,7 @@ export const CategoryGenerator = [
   },
   {
     name: "Supplements",
-    image: "../../public/supp5.jpg",
+    image: "https://i.ibb.co/1b9tpsZ/supp5.jpg",
   },
   {
     name: "Strength",
