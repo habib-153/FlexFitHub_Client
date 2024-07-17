@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# FlexFitHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+FlexFitHub is a comprehensive fitness accessories site designed to provide users with a wide range of fitness products. The site offers detailed information about each product, and the ability to purchase items directly from the platform.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Want to Visit? [Live Link](https://flex-fit-hub-client.vercel.app/)
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before you begin, ensure you have met the following requirements:
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (version 14.x or higher)
+- npm (version 6.x or higher) or yarn (version 1.x or higher)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Installation Steps
+
+Follow these steps to install and set up the project:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/habib-153/FlexFitHub_Client.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd FlexFitHub_Client
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+To start the development server, run:
+
+```bash
+npm start 
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
