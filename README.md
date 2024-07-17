@@ -6,6 +6,8 @@ FlexFitHub is a comprehensive fitness accessories site designed to provide users
 
 ## Want to Visit? [Live Link](https://flex-fit-hub-client.vercel.app/)
 
+### Server Repo: [Server Repo Link](https://github.com/habib-153/FlexFitHub_Server.git)
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
