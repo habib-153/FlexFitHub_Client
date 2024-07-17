@@ -33,15 +33,15 @@ const ProductManagement = () => {
   const TABLE_HEAD = ["Name", "Price", "Category", "Featured", "Action"];
   const products = data?.data;
   return (
-    <div className="">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold my-6">Manage Products</h1>
+    <div className="px-1">
+      <div className="flex flex-col sm:flex-row items-center justify-between">
+        <h1 className="text-2xl sm:text-3xl font-bold my-6">Manage Products</h1>
         <Link to="/products/addProduct">
           <Button
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
-            className="flex items-center text-lg normal-case gap-2 py-3 px-5"
+            className="flex items-center sm:text-lg normal-case gap-2 py-2 px-5"
           >
             {" "}
             Add Product
@@ -108,7 +108,7 @@ const ProductManagement = () => {
                         {category}
                       </p>
                     </td>
-                    <td className={classes}>
+                    <td className={`${classes} bg-blue-gray-50/50`}>
                       {featured ? (
                         <Button
                           placeholder={undefined}
@@ -157,8 +157,8 @@ const ProductManagement = () => {
                         </Button>
                       )}
                     </td>
-                    <td className={`${classes} bg-blue-gray-50/50 text-center`}>
-                      <div className="space-x-5">
+                    <td className={`${classes} text-center`}>
+                      <div className="flex sm:flex-row flex-col gap-2">
                         <Button
                           placeholder={undefined}
                           onPointerEnterCapture={undefined}
