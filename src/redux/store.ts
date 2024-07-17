@@ -3,7 +3,7 @@ import { baseApi } from "./api/baseApi";
 import storage from "redux-persist/lib/storage";
 import cartReducer from './features/cartSlice'
 import filterReducer from './features/filterSlice'
-import { FLUSH, PAUSE, PERSIST, persistReducer, PURGE, REGISTER, REHYDRATE } from "redux-persist";
+import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from "redux-persist";
 
 const persistConfig = {
   key: 'cart',
@@ -30,3 +30,5 @@ export const store = configureStore({
 export type RootState = ReturnType<typeof store.getState>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
+
+export const persistor = persistStore(store);
