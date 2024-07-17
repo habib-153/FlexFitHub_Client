@@ -42,6 +42,15 @@ const productApi = baseApi.injectEndpoints({
       },
       providesTags: ["Product"],
     }),
+    getFeaturedProduct: builder.query({
+      query: () => {
+        return {
+          url: "/products/featured",
+          method: "GET",
+        };
+      },
+      providesTags: ["Product"],
+    }),
     updateProduct: builder.mutation({
       query: ({ payload, id }) => {
         console.log(payload)
