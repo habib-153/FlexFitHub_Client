@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setCategory } from "../../../../redux/features/categorySlice";
+import { setCategories } from "../../../../redux/features/filterSlice";
 import CategoryCards from "./CategoryCards";
 
 const Categories = () => {
@@ -8,7 +8,7 @@ const Categories = () => {
     const dispatch = useDispatch()
 
     const handleCategory = (category: string) =>{
-        navigate(`/products`), dispatch(setCategory(category))
+        navigate(`/products`), dispatch(setCategories(category))
     }
     return (
         <div>

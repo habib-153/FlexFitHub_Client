@@ -6,6 +6,7 @@ export interface TProduct {
   category: string;
   stock: number;
   image: string;
+  featured?: boolean; // for showing featured products
 }
 
 export type TOrder = {
