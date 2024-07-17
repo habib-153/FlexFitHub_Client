@@ -4,11 +4,12 @@ import Swal from "sweetalert2";
 import { removeFromCart, updateCart } from "../redux/features/cartSlice";
 import { toast } from "sonner";
 import { Button } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const cart = useAppSelector((state) => state.cart);
+  const navigate = useNavigate()
 
   const totalPrice = cart.items.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -31,6 +32,10 @@ const Cart = () => {
       }
     });
   };
+
+  const handleCheckOut = () => {
+    navigate('/products/checkout')
+  }
 
   const handleUpdateQuantity = (id: string, quantity: number) => {
     dispatch(updateCart({ id, quantity }));
@@ -129,7 +134,7 @@ const Cart = () => {
                 type="button"
                 className="w-full bg-black text-white py-2 rounded"
                 disabled={cart.items.length === 0}
-                // onClick={checkOutHandler}
+                onClick={handleCheckOut}
               >
                 Proceed To CheckOut
               </button>
