@@ -98,7 +98,7 @@ const CheckoutForm = ({ submitHandler }: any) => {
         <div className="w-full text-center">
           <button
             type="submit"
-            className="w-full bg-black hover:bg-blue-gray-800 text-white my-3 rounded"
+            className="py-3 px-4 bg-black hover:bg-blue-gray-800 text-white my-3 rounded"
           >
             Submit
           </button>
