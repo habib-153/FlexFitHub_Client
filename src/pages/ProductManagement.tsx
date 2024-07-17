@@ -62,7 +62,7 @@ const ProductManagement = () => {
           </Button>
         </Link>
       </div>
-      <div className="md:w-[750px] my-8 rounded-2xl lg:w-[1200px] overflow-scroll">
+      <div className="my-8 rounded-2xl overflow-scroll">
         <table className="w-full table-auto text-left">
           <thead>
             <tr>
