@@ -106,6 +106,8 @@ const CreateProduct = () => {
               className="textarea h-24 textarea-bordered"
               required
               label="Description"
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
             ></Textarea>
           </div>
           <div className="form-control w-full my-4">

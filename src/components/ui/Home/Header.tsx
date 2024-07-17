@@ -43,8 +43,7 @@ const Header = () => {
     <div className="bg-[#1a1c1cfd]">
       <Navbar
         className="mx-auto max-w-[1200px] bg-transparent border-0 px-0  w-full py-3"
-        placeholder=""         
-      >
+        placeholder="" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
         <div className="flex items-center justify-between text-[#FFFFFF]">
           <NavLink
             to="/"
@@ -61,7 +60,7 @@ const Header = () => {
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
             ripple={false}
             onClick={() => setOpenNav(!openNav)}
-            placeholder="" >
+            placeholder="" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
             {openNav ? (
               <XMarkIcon className="h-6 w-6" />
             ) : (

@@ -23,14 +23,13 @@ export const FormInput: React.FC<FormInputProps> = ({
       <span className="label-text">{label}</span>
     </label>
     <Input
-      id={id}
+      onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined} id={id}
       placeholder={label ? `Enter Product ${label}` : ''}
       type={type}
       {...register}
       className="w-full px-3 py-2 border rounded"
       required={required}
       label={label}
-      defaultValue={defaultValue}
-    />
+      defaultValue={defaultValue}    />
   </div>
 );

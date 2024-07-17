@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Button, Radio } from "@material-tailwind/react";
+import { Radio } from "@material-tailwind/react";
 import { useForm } from "react-hook-form";
 import { FormInput } from "../ProductManagement/FormInput";
 import { TCheckoutForm } from "../../../types";
 
-const CheckoutForm = ({submitHandler}: any) => {
+const CheckoutForm = ({ submitHandler }: any) => {
   const {
     register,
     handleSubmit,
@@ -47,7 +47,9 @@ const CheckoutForm = ({submitHandler}: any) => {
             register={{ ...register("phone", { required: true }) }}
           />
           {errors.phone && (
-            <span className="text-red-500 text-sm">Phone Number is required</span>
+            <span className="text-red-500 text-sm">
+              Phone Number is required
+            </span>
           )}
           <label htmlFor="address" className="font-medium text-gray-700">
             Address
@@ -70,29 +72,36 @@ const CheckoutForm = ({submitHandler}: any) => {
           </p>
           <div className="flex justify-center space-x-4">
             <Radio
-            //   name="paymentMethod"
+              //   name="paymentMethod"
               label="Cash on Delivery"
               value="COD"
-              //checked={paymentMethod === 'PayPal'}
-              //onChange={(e) => setPaymentMethod(e.target.value)}
+              crossOrigin={undefined}
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
               {...register("paymentMethod", { required: true })}
             />
             <Radio
-            //   name="paymentMethod"
+              crossOrigin={undefined}
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
               label="Stripe"
               value="Stripe"
-              //onChange={(e) => setPaymentMethod(e.target.value)}
               {...register("paymentMethod", { required: true })}
             />
           </div>
           {errors.paymentMethod && (
-            <span className="text-red-500 text-sm">Payment Method is required</span>
+            <span className="text-red-500 text-sm">
+              Payment Method is required
+            </span>
           )}
         </div>
         <div className="w-full text-center">
-          <Button type="submit" className="my-3 ">
+          <button
+            type="submit"
+            className="w-full bg-black hover:bg-blue-gray-800 text-white my-3 rounded"
+          >
             Submit
-          </Button>
+          </button>
         </div>
       </form>
     </div>

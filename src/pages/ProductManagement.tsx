@@ -37,7 +37,12 @@ const ProductManagement = () => {
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold my-6">Manage Products</h1>
         <Link to="/products/addProduct">
-          <Button className="flex items-center text-lg normal-case gap-2 py-3 px-5">
+          <Button
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+            className="flex items-center text-lg normal-case gap-2 py-3 px-5"
+          >
             {" "}
             Add Product
             <svg
@@ -106,6 +111,9 @@ const ProductManagement = () => {
                     <td className={classes}>
                       {featured ? (
                         <Button
+                          placeholder={undefined}
+                          onPointerEnterCapture={undefined}
+                          onPointerLeaveCapture={undefined}
                           onClick={() =>
                             handleUpdateFeatured(_id as string, true)
                           }
@@ -127,6 +135,9 @@ const ProductManagement = () => {
                         </Button>
                       ) : (
                         <Button
+                          placeholder={undefined}
+                          onPointerEnterCapture={undefined}
+                          onPointerLeaveCapture={undefined}
                           onClick={() =>
                             handleUpdateFeatured(_id as string, false)
                           }
@@ -149,6 +160,9 @@ const ProductManagement = () => {
                     <td className={`${classes} bg-blue-gray-50/50 text-center`}>
                       <div className="space-x-5">
                         <Button
+                          placeholder={undefined}
+                          onPointerEnterCapture={undefined}
+                          onPointerLeaveCapture={undefined}
                           size="sm"
                           onClick={() =>
                             handleDeleteProduct(_id as string, deleteProduct)
@@ -171,7 +185,12 @@ const ProductManagement = () => {
                           </svg>
                         </Button>
                         <Link to={`/products/update/${_id}`}>
-                          <Button size="sm">
+                          <Button
+                            size="sm"
+                            placeholder={undefined}
+                            onPointerEnterCapture={undefined}
+                            onPointerLeaveCapture={undefined}
+                          >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"

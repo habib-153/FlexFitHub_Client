@@ -13,11 +13,19 @@ const CategoryCards = ({ handleCategory }: CategoryCardsProps) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6">
         {CategoryGenerator?.map((category, idx) => (
           <Card
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
             key={idx}
             className="cursor-pointer border p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             onClick={() => handleCategory(category.name)}
           >
-            <CardBody className="flex flex-col items-center">
+            <CardBody
+              className="flex flex-col items-center"
+              placeholder=""
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
+            >
               <img
                 className="w-full h-48 object-contain mb-4"
                 src={category.image}

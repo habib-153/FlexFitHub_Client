@@ -26,9 +26,8 @@ const Category = () => {
         {CategoryGenerator?.map((category, idx) => (
         <div className="flex items-center gap-2" key={idx}>
           <Checkbox
-            onChange={() => handleCategory(category.name)}
-            checked={categories.includes(category.name)}
-          />
+              onChange={() => handleCategory(category.name)}
+              checked={categories.includes(category.name)} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined}          />
           <p>{category.name}</p>
         </div>
       ))}

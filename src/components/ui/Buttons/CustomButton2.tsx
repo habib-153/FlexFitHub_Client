@@ -9,6 +9,8 @@ interface CustomButtonProps {
 const CustomButton2 = ({ text , bgColor, textColor }: CustomButtonProps) => {
   return (
     <Button
+      onPointerEnterCapture={() => {}}
+      onPointerLeaveCapture={() => {}}
       placeholder=""
       variant={!bgColor ? "outlined" : undefined}
       style={bgColor

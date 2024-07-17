@@ -101,7 +101,7 @@ const Cart = () => {
                       </div>
                     </div>
                     <div className="">
-                      <Button
+                      <Button placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
                         size="sm"
                         onClick={() => handleRemoveItem(item._id as string)}
                         className="bg-red-500"

@@ -102,11 +102,10 @@ const UpdateProduct = () => {
               <span className="label-text">Description</span>
             </label>
             <Textarea
-              {...register("description", { required: true })}
-              className="textarea h-24 textarea-bordered"
-              required
-              label="Description"
-            ></Textarea>
+            onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} {...register("description", { required: true })}
+            className="textarea h-24 textarea-bordered"
+            required
+            label="Description"            ></Textarea>
           </div>
           <div className="form-control w-full my-4">
             <FormInput

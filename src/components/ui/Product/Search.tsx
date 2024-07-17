@@ -17,13 +17,17 @@ const Search = () => {
   );
   return (
     <div className="group relative">
-      <Input onChange={(e) => debounceSearch(e.target.value)}
+      <Input
+        onChange={(e) => debounceSearch(e.target.value)}
         type="text"
         placeholder="Search"
         className="focus:!border-t-gray-900 group-hover:border-2 group-hover:!border-gray-900"
         labelProps={{
           className: "hidden",
         }}
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}
+        crossOrigin=""
       />
       <div className="absolute top-[calc(50%-1px)] right-2.5 -translate-y-2/4">
         <svg
