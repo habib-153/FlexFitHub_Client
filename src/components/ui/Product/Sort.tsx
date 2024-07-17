@@ -10,7 +10,7 @@ const Sort = () => {
   };
   return (
     <div>
-      <label className="font-semibold text-left">Sort:</label>
+      <label className="font-semibold text-left mr-1">Sort:</label>
       <select
         name="price" onChange={handleSort}
         defaultValue="default"

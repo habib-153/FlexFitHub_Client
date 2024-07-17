@@ -43,7 +43,7 @@ const ProductDetails = () => {
       dispatch(
         cartItem
           ? updateCart({ ...cartItem, quantity: cartItem.quantity + 1 })
-          : addToCart({ ...product, quantity: 1 })
+          : addToCart({ ...product, quantity: quantity })
       );
       toast.success("Item added to cart");
       navigate('/products/cart')

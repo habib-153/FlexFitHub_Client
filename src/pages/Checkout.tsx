@@ -3,15 +3,15 @@ import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { useNavigate } from "react-router-dom";
 import { TCheckoutForm, TOrder } from "../types";
 import { SubmitHandler } from "react-hook-form";
-import orderApi from "../redux/api/orderApi";
 import { toast } from "sonner";
 import { clearCart } from "../redux/features/cartSlice";
+import orderApi from "../redux/api/orderApi";
 
 const Checkout = () => {
   const dispatch = useAppDispatch();
   const cart = useAppSelector((state) => state.cart);
   const navigate = useNavigate();
-  const [createOrder] = orderApi.useCreateOrderMutation();
+  const [createOrder] = orderApi.useCreateOrderMutation()
 
   const totalPrice = cart.items.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -30,7 +30,7 @@ const Checkout = () => {
       await createOrder(order);
       dispatch(clearCart());
       toast.success("Order Placed Successfully");
-      navigate("/products");
+      navigate("/products/success");
     } catch (err) {
       toast.error("Failed to Place order");
     }
@@ -52,10 +52,10 @@ const Checkout = () => {
             {cart.items.map((item, idx) => (
               <div
                 key={item?._id}
-                className="flex justify-between items-center py-6 px-3 bg-gray-100 rounded shadow-sm"
+                className="flex justify-between items-center py-6 px-3 gap-3 bg-gray-100 rounded shadow-sm"
               >
-                <div className="flex items-center gap-4">
-                  <span>{idx+1}</span>
+                <div className="flex items-center gap-2">
+                  <span>{idx+1}.</span>
                   <span className="font-semibold">{item.name}</span>
                   <span className="text-gray-500">x</span>
                   <span className="font-semibold">{item.quantity}</span>
